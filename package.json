@@ -1,0 +1,19 @@
+{
+  "name": "chicago-crime-map",
+  "version": "1.0.0",
+  "description": "Chicago Crime Data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vahuja3795/Chicago-Crime-Map.git"
+  },
+  "author": "Varun Ahuja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vahuja3795/Chicago-Crime-Map/issues"
+  },
+  "homepage": "https://github.com/vahuja3795/Chicago-Crime-Map#readme"
+}
