@@ -4,6 +4,7 @@
   "description": "Chicago Crime Data",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon -e js,ejs,html,css -w . -w public -w views -w routes -w models index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/vahuja3795/Chicago-Crime-Map/issues"
   },
-  "homepage": "https://github.com/vahuja3795/Chicago-Crime-Map#readme"
+  "homepage": "https://github.com/vahuja3795/Chicago-Crime-Map#readme",
+  "dependencies": {
+    "ajax": "0.0.4",
+    "axios": "^0.21.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "najax": "^1.0.4",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  }
 }
