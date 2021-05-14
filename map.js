@@ -70,3 +70,108 @@
           heatmap.setMap(map)
         });
       }
+
+      function getWardData(value) {
+        if(value == "null") {
+          initMap();
+          return;
+        }
+        initMap()
+
+        let mapKey = document.getElementById("mapPoints").value
+        dataPoints = []
+        $.ajax({
+            url: "https://data.cityofchicago.org/resource/ijzp-q8t2.json?ward=" + value,
+            type: "GET",
+            data: {
+              "$limit" : 10000,
+              "$$app_token" : mapKey
+            }
+        }).done(function(data) {
+          
+          for(let i = 0; i < data.length; i++) {
+              if(!isNaN(parseFloat(data[i].longitude)) && !isNaN(parseFloat(data[i].latitude))) {
+                dataPoints.push(new google.maps.LatLng(parseFloat(data[i].latitude),parseFloat(data[i].longitude)))
+              } 
+          }
+          heatmap = new google.maps.visualization.HeatmapLayer({
+            data: dataPoints,
+            map: map,
+          });
+
+          document.getElementById("districtSelector").selectedIndex = "0";
+          document.getElementById("yearSelector").selectedIndex = "0";
+
+          heatmap.setMap(map)
+        });
+      }
+
+      function getDistrictData(value) {
+        if(value == "null") {
+          initMap();
+          return;
+        }
+        initMap()
+
+        let mapKey = document.getElementById("mapPoints").value
+        dataPoints = []
+        $.ajax({
+            url: "https://data.cityofchicago.org/resource/ijzp-q8t2.json?district=" + value,
+            type: "GET",
+            data: {
+              "$limit" : 10000,
+              "$$app_token" : mapKey
+            }
+        }).done(function(data) {
+          
+          for(let i = 0; i < data.length; i++) {
+              if(!isNaN(parseFloat(data[i].longitude)) && !isNaN(parseFloat(data[i].latitude))) {
+                dataPoints.push(new google.maps.LatLng(parseFloat(data[i].latitude),parseFloat(data[i].longitude)))
+              } 
+          }
+          heatmap = new google.maps.visualization.HeatmapLayer({
+            data: dataPoints,
+            map: map,
+          });
+
+          document.getElementById("wardSelector").selectedIndex = "0";
+          document.getElementById("yearSelector").selectedIndex = "0";
+
+          heatmap.setMap(map)
+        });
+      }
+
+      function getYearData(value) {
+        if(value == "null") {
+          initMap();
+          return;
+        }
+        initMap()
+
+        let mapKey = document.getElementById("mapPoints").value
+        dataPoints = []
+        $.ajax({
+            url: "https://data.cityofchicago.org/resource/ijzp-q8t2.json?year=" + value,
+            type: "GET",
+            data: {
+              "$limit" : 10000,
+              "$$app_token" : mapKey
+            }
+        }).done(function(data) {
+          
+          for(let i = 0; i < data.length; i++) {
+              if(!isNaN(parseFloat(data[i].longitude)) && !isNaN(parseFloat(data[i].latitude))) {
+                dataPoints.push(new google.maps.LatLng(parseFloat(data[i].latitude),parseFloat(data[i].longitude)))
+              } 
+          }
+          heatmap = new google.maps.visualization.HeatmapLayer({
+            data: dataPoints,
+            map: map,
+          });
+
+          document.getElementById("wardSelector").selectedIndex = "0";
+          document.getElementById("districtSelector").selectedIndex = "0";
+
+          heatmap.setMap(map)
+        });
+      }

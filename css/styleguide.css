@@ -1,0 +1,10 @@
+:root {
+  --white: #ffffff;
+
+  --font-size-m: 45px;
+  --font-size-s: 30px;
+
+  --font-family-espera-bold: "Espera-Bold", Helvetica;
+  --font-family-rockford_sans: "Rockford Sans", Helvetica;
+  --font-family-rockfordsans-light: "RockfordSans-Light", Helvetica;
+}
