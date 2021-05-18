@@ -14,6 +14,18 @@ const dataToken = process.env.CHICAGO_API_TOKEN
 
 router.use(express.static(__dirname));
 
+/*
+  Adding paths for the executable file to run properly
+*/
+path.join(__dirname,'views/index.ejs')
+path.join(__dirname,'css/globals.css')
+path.join(__dirname,'css/styleguide.css')
+path.join(__dirname,'css/web-1920-1.css')
+path.join(__dirname,'img/below-taskbar@1x.png')
+path.join(__dirname,'img/flag-logo@1x.png')
+path.join(__dirname,'img/top-taskbar@1x.png')
+path.join(__dirname,'styles.css')
+
 router.set('view engine', 'ejs');
 
 /*
@@ -23,7 +35,7 @@ router.set('view engine', 'ejs');
 */
 
 router.get('/', function(req, res) {
-    res.render("index.ejs",{mapKey,dataToken});
+    res.render(path.join(__dirname,'views/index.ejs'),{mapKey,dataToken});
 });
 
 
