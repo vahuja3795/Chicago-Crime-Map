@@ -16,21 +16,13 @@ router.use(express.static(__dirname));
 
 router.set('view engine', 'ejs');
 
+/*
+  Setting up the necessary files and frameworks that are needed to run the server so the webpage can load properly on the web browser.
+  /mapDetails and /crimeData are test urls where the Google Map API and Chicago Crime Data API can be seen working
+  (Requirement 3.3)
+*/
 
 router.get('/', function(req, res) {
-    /*
-    let crimeData;
-    najax({
-        url: "https://data.cityofchicago.org/resource/ijzp-q8t2.json",
-        type: "GET",
-        data: {
-          "$limit" : 50,
-          "$$app_token" : dataToken
-        }
-    }).done(function(data) {
-      crimeData = data
-      res.render("index.ejs",{mapKey, crimeData, dataToken});
-    });*/
     res.render("index.ejs",{mapKey,dataToken});
 });
 

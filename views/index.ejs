@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- This ejs file has all the html, css, and javascript files needed to run the application
+	(Requirement 3.1,3.1.1) -->
 <html>
   <head>
     <title>Heatmaps</title>
@@ -29,7 +31,11 @@
           <span class="span0-6q4OOa"></span><span class="span1-6q4OOa"></span
           ><span class="span2-6q4OOa">Crime Map</span>
 			<nav>
-  <ul class="menu">        
+  <ul class="menu"> 
+<!-- Creating drop-down lists for the users
+	(Requirement 3.4)-->       
+<!-- Creating dropdown menu for ward 
+	(Requirement 3.4.2)-->
 <div class="dropdown-ward">
 	<select id="wardSelector" onchange="getWardData(value);">
 		<option value="null" selected="selected">Ward</option>
@@ -85,6 +91,8 @@
 		<option value="50">50</option>
 	</select>
 </div>
+<!-- Creating dropdown menu for district 
+	(Requirement 3.4.3)-->
 <div class="dropdown-district">
 	<select id="districtSelector" onchange="getDistrictData(value);">
 		<option value="null" selected="selected">District</option>
@@ -113,6 +121,8 @@
 		<option value="031">31</option>
 	</select>
 </div>
+<!-- Creating dropdown menu for year
+	(Requirement 3.4.1)-->
 <div class="dropdown-year">
 	<select id="yearSelector" onchange="getYearData(value);">
 		<option value="null" selected="selected">Year</option>
@@ -151,13 +161,13 @@
         <button onclick="changeGradient()">Change gradient</button>
         <button onclick="changeRadius()">Change radius</button>
         <button onclick="changeOpacity()">Change opacity</button>
+		<button onclick="getPoints()">Get Points</button>
       </div>
 
       <div id="map" style="max-width:100%; height:600px;"></div>
-         
-      <button onclick="getPoints()">Get Data</button>
     </div>
-
+	<!-- Adding the Google Maps API in the front-end
+		(Requirement 3.2.1)-->
     <script src="https://maps.googleapis.com/maps/api/js?key=<%=mapKey%>&callback=initMap&libraries=visualization&v=weekly"></script>
   </body>
 </html>
