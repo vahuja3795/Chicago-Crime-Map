@@ -1,0 +1,106 @@
+/* screen - web-1920-1 */
+
+.web-1920-1 {
+  background-color: var(--white);
+  height: 100px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+.web-1920-1 .bottom-header {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  object-fit: cover;
+  position: relative;
+  top: 83px;
+  max-width: 100%;	
+}
+.web-1920-1 .flag-logo-C61RwL {
+  background-color: transparent;
+  border-radius: 10px;
+  height: 62px;
+  left: 10px;
+  object-fit: cover;
+  position: absolute;
+  top: 12px;
+  width: 92px;
+}
+.web-1920-1 .logo-C61RwL {
+  -webkit-text-stroke: 0.5px #000000;
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-rockford_sans);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  height: auto;
+  left: 109px;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  white-space: nowrap;
+  width: auto;
+}
+.web-1920-1 .map-C61RwL {
+  background-color: transparent;
+  border-radius: 30px;
+  height: 868px;
+  position: relative;
+  top: 133px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+.web-1920-1 .span0-6q4OOa {
+  color: #a5d6ef;
+  font-family: var(--font-family-rockfordsans-light);
+  font-style: normal;
+  font-weight: 300;
+}
+.web-1920-1 .span1-6q4OOa {
+  color: #ff0000;
+  font-family: var(--font-family-rockfordsans-light);
+  font-style: normal;
+  font-weight: 300;
+}
+.web-1920-1 .span2-6q4OOa {
+  font-family: var(--font-family-espera-bold);
+  font-size: var(--font-size-s);
+  font-style: normal;
+}
+.web-1920-1 .header {
+  background-color: transparent;
+  height: 83px;
+  left: -0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: auto;
+}
+nav {
+    position: relative;
+    float: right;
+    left: 12px;
+	bottom: 3px;
+
+}
+.web-1920-1 .dropdown-ward{
+	position: relative;
+	float: left;
+	width: 66px;
+		
+}
+.web-1920-1 .dropdown-district{
+	position: relative;
+	float: left;
+	width: 66px;
+}
+.web-1920-1 .dropdown-year{
+	position: relative;
+	float: left;
+	width: 66px;
+}

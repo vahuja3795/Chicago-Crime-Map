@@ -1,0 +1,50 @@
+/*
+  This is following the guidelines that were presented in the wireframe from the design documentation
+*/
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@font-face {
+  font-family: "Espera-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/6077b4cce469567d8c8dd5fe/fonts/espera-bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "RockfordSans-Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/6077b4cce469567d8c8dd5fe/fonts/espera-bold.ttf")
+    format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+.container-center-horizontal {
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.container-center-horizontal > * {
+  pointer-events: auto;
+  flex-shrink: 0;
+}
+.screen * {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+.screen a {
+  text-decoration: none;
+  display: contents;
+}
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
